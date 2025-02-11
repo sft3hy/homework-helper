@@ -1,0 +1,2159 @@
+
+
+{
+   "Question_List": [
+      {
+         "question_number": "1",
+         "question_context": "Say we have two quantitive explanatory variables, X1 and X2, and a quantitative continuous response Y. Say we have two population models.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Is Model 1 nested under Model 2? Yes or no."
+            },
+            {
+               "question_letter": "b",
+               "question": "In Model 1, what would a null hypothesis of β1 = 0 imply with how X1 affects the response?"
+            },
+            {
+               "question_letter": "c",
+               "question": "In Model 2, if β3 is not equal to 0, what does that imply with how X1 is affecting Y. Explain in a sentence or two."
+            },
+            {
+               "question_letter": "d",
+               "question": "In Model 2, given that X1 is in the model already, say you want to test if X2 affects the response directly or indirectly (through X1). What should be the null and alternative be?"
+            },
+            {
+               "question_letter": "e",
+               "question": "In Model 2, if you want to test if X1 and X2 have any association with Y, what would the null and alternative be?"
+            },
+            {
+               "question_letter": "f",
+               "question": "In Model 2, now say X2 is a categorical yes/no covariate (0 for no and 1 for yes). Interpret the effect of X1 on the response variable Y."
+            }
+         ]
+      },
+      {
+         "question_number": "2",
+         "question_context": "Say you have two models with respect to the same response variable Y. Model 1 has all the p-many explanatory variables that Model 2 has but also an additional new explanatory variable.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "The adjusted R-squared (not the regular R squared, but the adjusted one) of Model 1 is more than Model 2."
+            },
+            {
+               "question_letter": "b",
+               "question": "Model 1 has a higher sum of square total (SSTO) than Model 2."
+            },
+            {
+               "question_letter": "c",
+               "question": "Model 1 has a higher sum of square error (SSE) than Model 2."
+            },
+            {
+               "question_letter": "d",
+               "question": "The slope β1 on the first explanatory variable, X1, is the same in both models."
+            }
+         ]
+      },
+      {
+         "question_number": "3",
+         "question_context": "This question will use the pulse.txt dataset we have been using. Let the response Y be Rest (resting heart rate), and covariates X1 be Height in inches (Hgt), X2 be Weight in pounds (Wgt) and X3 smoking status (Smoke, 1 for smokers and 0 for non-smokers).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Say we want a multiple linear regression model with all the covariates listed in it, along with an interaction between height and weight. Write out this population model."
+            },
+            {
+               "question_letter": "b",
+               "question": "Why does it make sense to have an interaction between weight and height in the model? Explain."
+            },
+            {
+               "question_letter": "c",
+               "question": "Fit the model from part a. in R and write out the estimated model. What is the adjusted R-squared value?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What is the estimated SSE (sum of squared errors) of your model? Use the R output from the summary(model), along with some formulas, to compute this."
+            },
+            {
+               "question_letter": "e",
+               "question": "Test if your model has any significance. Write out the null and alternative hypothesis, the test statistic (and what distribution it follows), p-value, and make a conclusion."
+            },
+            {
+               "question_letter": "f",
+               "question": "Test the interaction term between height and weight. State the null and alternative hypothesis and p-value. What can you conclude with respect to the effect of height and weight on the response of resting heart rate?"
+            },
+            {
+               "question_letter": "g",
+               "question": "Now a researcher states that you do not need weight in the model in any way or form. Write out the null and alternative hypothesis for this (write it out in terms of slope coefficients)."
+            },
+            {
+               "question_letter": "h",
+               "question": "Conduct the test from part g. Make a conclusion in context of the study."
+            },
+            {
+               "question_letter": "i",
+               "question": "Show the output from R for the sequential sum of regressions table (keep the order of X1, X2, X3, and X1X2 in your model). Does adding weight when height is already in the model add to the explanatory strength of the model?"
+            },
+            {
+               "question_letter": "j",
+               "question": "Using the sequential sum of regression table from part i, what is the SSTO (sum of squared total) for this model?"
+            },
+            {
+               "question_letter": "k",
+               "question": "Now say you have a model with only height in it. From your table in part i, what is the SSE, SSR, and SSTO of this model with only height as covariate? Note: Do not run a new model, use the table from part i."
+            },
+            {
+               "question_letter": "l",
+               "question": "Explain in a few sentences how daily exercise amount could be a potential confounder in the model from part a."
+            },
+            {
+               "question_letter": "m",
+               "question": "Using the model from part a., create and present the scatterplot of the residual versus fitted values (fitted values go on the X-axis)."
+            },
+            {
+               "question_letter": "n",
+               "question": "Is there any evidence that our assumption of constant variance (a single σ2 for the entire model) is invalid?"
+            },
+            {
+               "question_letter": "o",
+               "question": "Using the residual vs. fitted plot from part m., comment on the linearity assumption of the model that was fit."
+            },
+            {
+               "question_letter": "p",
+               "question": "Using the model from part a., now create a QQ plot of the residuals. Do we seem to have any issues with our normality assumption for the errors?"
+            },
+            {
+               "question_letter": "q",
+               "question": "Using the model from part a., do a summary(data) to see the summary statistics of the weight (Wgt) explanatory variable. Does it make sense to use your model from part a. to predict the resting heart rate for someone who weighs 350 pounds? Why or why not."
+            }
+         ]
+      },
+      {
+         "question_number": "4",
+         "question_context": "An environmental expert is interested in modeling the concentration of various chemicals in well water over time.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Predict the amount of arsenic (Arsenic) in a well based on Year, the distance (Miles) from a mining site, and the interaction of these two variables."
+            },
+            {
+               "question_letter": "b",
+               "question": "Predict the amount of lead (Lead) in a well based on Year with two different lines depending on whether or not the well has been cleaned (Iclean)."
+            },
+            {
+               "question_letter": "c",
+               "question": "Predict the amount of titanium (Titanium) in a well based on a possible quadratic relationship with the distance (Miles) from a mining site."
+            },
+            {
+               "question_letter": "d",
+               "question": "Predict the amount of sulﬁde (Sulﬁde) in a well based on Year, distance (Miles) from a mining site, depth (Depth) of the well, and any interactions of pairs of explanatory variables."
+            }
+         ]
+      },
+      {
+         "question_number": "5",
+         "question_context": "This question will use the ThreeCars.txt dataset on our class Canvas page. The response variable is Price (the price of the car) and the explanatory variable is Mileage (miles of the car in 1000’s of miles).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Create a scatterplot of Mileage on the X-axis and Price on the Y-axis. Show the plot and comment on what you see with respect to the association between Mileage and Price."
+            },
+            {
+               "question_letter": "b",
+               "question": "Fit a simple linear regression model with the response being Price and the covariate being Mileage. Show the residuals plot versus fitted values plot."
+            },
+            {
+               "question_letter": "c",
+               "question": "What do you see in the plot from part b. with respect to the linear relationship between Mileage and Price?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What do you see in the plot from part b. with respect to the constant variance assumption of the linear regression model?"
+            },
+            {
+               "question_letter": "e",
+               "question": "Create a qq-plot of the residuals, and comment on the normality of the errors assumption."
+            }
+         ]
+      }
+   ]
+}
+
+{
+   "Question_List": [
+      {
+         "question_number": "1",
+         "question_context": "Say we have two quantitive explanatory variables, X1 and X2, and a quantitative continuous response Y. Say we have two population models.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Is Model 1 nested under Model 2? Yes or no."
+            },
+            {
+               "question_letter": "b",
+               "question": "In Model 1, what would a null hypothesis of β1 = 0 imply with how X1 affects the response?"
+            },
+            {
+               "question_letter": "c",
+               "question": "In Model 2, if β3 is not equal to 0, what does that imply with how X1 is affecting Y. Explain in a sentence or two."
+            },
+            {
+               "question_letter": "d",
+               "question": "In Model 2, given that X1 is in the model already, say you want to test if X2 affects the response directly or indirectly (through X1). What should be the null and alternative be?"
+            },
+            {
+               "question_letter": "e",
+               "question": "In Model 2, if you want to test if X1 and X2 have any association with Y, what would the null and alternative be?"
+            },
+            {
+               "question_letter": "f",
+               "question": "In Model 2, now say X2 is a categorical yes/no covariate (0 for no and 1 for yes). Interpret the effect of X1 on the response variable Y."
+            }
+         ]
+      },
+      {
+         "question_number": "2",
+         "question_context": "Say you have two models with respect to the same response variable Y. Model 1 has all the p-many explanatory variables that Model 2 has but also an additional new explanatory variable.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "The adjusted R-squared (not the regular R squared, but the adjusted one) of Model 1 is more than Model 2."
+            },
+            {
+               "question_letter": "b",
+               "question": "Model 1 has a higher sum of square total (SSTO) than Model 2."
+            },
+            {
+               "question_letter": "c",
+               "question": "Model 1 has a higher sum of square error (SSE) than Model 2."
+            },
+            {
+               "question_letter": "d",
+               "question": "The slope β1 on the first explanatory variable, X1, is the same in both models."
+            }
+         ]
+      },
+      {
+         "question_number": "3",
+         "question_context": "This question will use the pulse.txt dataset we have been using. Let the response Y be Rest (resting heart rate), and covariates X1 be Height in inches (Hgt), X2 be Weight in pounds (Wgt) and X3 smoking status (Smoke, 1 for smokers and 0 for non-smokers).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Say we want a multiple linear regression model with all the covariates listed in it, along with an interaction between height and weight. Write out this population model."
+            },
+            {
+               "question_letter": "b",
+               "question": "Why does it make sense to have an interaction between weight and height in the model? Explain."
+            },
+            {
+               "question_letter": "c",
+               "question": "Fit the model from part a. in R and write out the estimated model. What is the adjusted R-squared value?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What is the estimated SSE (sum of squared errors) of your model? Use the R output from the summary(model), along with some formulas, to compute this."
+            },
+            {
+               "question_letter": "e",
+               "question": "Test if your model has any significance. Write out the null and alternative hypothesis, the test statistic (and what distribution it follows), p-value, and make a conclusion."
+            },
+            {
+               "question_letter": "f",
+               "question": "Test the interaction term between height and weight. State the null and alternative hypothesis and p-value. What can you conclude with respect to the effect of height and weight on the response of resting heart rate?"
+            },
+            {
+               "question_letter": "g",
+               "question": "Now a researcher states that you do not need weight in the model in any way or form. Write out the null and alternative hypothesis for this (write it out in terms of slope coefficients)."
+            },
+            {
+               "question_letter": "h",
+               "question": "Conduct the test from part g. Make a conclusion in context of the study."
+            },
+            {
+               "question_letter": "i",
+               "question": "Show the output from R for the sequential sum of regressions table (keep the order of X1, X2, X3, and X1X2 in your model). Does adding weight when height is already in the model add to the explanatory strength of the model?"
+            },
+            {
+               "question_letter": "j",
+               "question": "Using the sequential sum of regression table from part i, what is the SSTO (sum of squared total) for this model?"
+            },
+            {
+               "question_letter": "k",
+               "question": "Now say you have a model with only height in it. From your table in part i, what is the SSE, SSR, and SSTO of this model with only height as covariate? Note: Do not run a new model, use the table from part i."
+            },
+            {
+               "question_letter": "l",
+               "question": "Explain in a few sentences how daily exercise amount could be a potential confounder in the model from part a."
+            },
+            {
+               "question_letter": "m",
+               "question": "Using the model from part a., create and present the scatterplot of the residual versus fitted values (fitted values go on the X-axis)."
+            },
+            {
+               "question_letter": "n",
+               "question": "Is there any evidence that our assumption of constant variance (a single σ2 for the entire model) is invalid?"
+            },
+            {
+               "question_letter": "o",
+               "question": "Using the residual vs. fitted plot from part m., comment on the linearity assumption of the model that was fit."
+            },
+            {
+               "question_letter": "p",
+               "question": "Using the model from part a., now create a QQ plot of the residuals. Do we seem to have any issues with our normality assumption for the errors?"
+            },
+            {
+               "question_letter": "q",
+               "question": "Using the model from part a., do a summary(data) to see the summary statistics of the weight (Wgt) explanatory variable. Does it make sense to use your model from part a. to predict the resting heart rate for someone who weighs 350 pounds? Why or why not."
+            }
+         ]
+      },
+      {
+         "question_number": "4",
+         "question_context": "An environmental expert is interested in modeling the concentration of various chemicals in well water over time.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Predict the amount of arsenic (Arsenic) in a well based on Year, the distance (Miles) from a mining site, and the interaction of these two variables."
+            },
+            {
+               "question_letter": "b",
+               "question": "Predict the amount of lead (Lead) in a well based on Year with two different lines depending on whether or not the well has been cleaned (Iclean)."
+            },
+            {
+               "question_letter": "c",
+               "question": "Predict the amount of titanium (Titanium) in a well based on a possible quadratic relationship with the distance (Miles) from a mining site."
+            },
+            {
+               "question_letter": "d",
+               "question": "Predict the amount of sulﬁde (Sulﬁde) in a well based on Year, distance (Miles) from a mining site, depth (Depth) of the well, and any interactions of pairs of explanatory variables."
+            }
+         ]
+      },
+      {
+         "question_number": "5",
+         "question_context": "This question will use the ThreeCars.txt dataset on our class Canvas page. The response variable is Price (the price of the car) and the explanatory variable is Mileage (miles of the car in 1000’s of miles).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Create a scatterplot of Mileage on the X-axis and Price on the Y-axis. Show the plot and comment on what you see with respect to the association between Mileage and Price."
+            },
+            {
+               "question_letter": "b",
+               "question": "Fit a simple linear regression model with the response being Price and the covariate being Mileage. Show the residuals plot versus fitted values plot."
+            },
+            {
+               "question_letter": "c",
+               "question": "What do you see in the plot from part b. with respect to the linear relationship between Mileage and Price?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What do you see in the plot from part b. with respect to the constant variance assumption of the linear regression model?"
+            },
+            {
+               "question_letter": "e",
+               "question": "Create a qq-plot of the residuals, and comment on the normality of the errors assumption."
+            }
+         ]
+      }
+   ]
+}
+
+{
+   "Homework_Number": "3",
+   "Question_List": [
+      {
+         "question_number": "1",
+         "question_context": "Say we have two quantitive explanatory variables, X1 and X2, and a quantitative continuous response Y. Say we have two population models.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Is Model 1 nested under Model 2? Yes or no."
+            },
+            {
+               "question_letter": "b",
+               "question": "In Model 1, what would a null hypothesis of β1 = 0 imply with how X1 affects the response?"
+            },
+            {
+               "question_letter": "c",
+               "question": "In Model 2, if β3 is not equal to 0, what does that imply with how X1 is affecting Y. Explain in a sentence or two."
+            },
+            {
+               "question_letter": "d",
+               "question": "In Model 2, given that X1 is in the model already, say you want to test if X2 affects the response directly or indirectly (through X1). What should be the null and alternative be?"
+            },
+            {
+               "question_letter": "e",
+               "question": "In Model 2, if you want to test if X1 and X2 have any association with Y, what would the null and alternative be?"
+            },
+            {
+               "question_letter": "f",
+               "question": "In Model 2, now say X2 is a categorical yes/no covariate (0 for no and 1 for yes). Interpret the effect of X1 on the response variable Y."
+            }
+         ]
+      },
+      {
+         "question_number": "2",
+         "question_context": "Say you have two models with respect to the same response variable Y. Model 1 has all the p-many explanatory variables that Model 2 has but also an additional new explanatory variable.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "The adjusted R-squared (not the regular R squared, but the adjusted one) of Model 1 is more than Model 2."
+            },
+            {
+               "question_letter": "b",
+               "question": "Model 1 has a higher sum of square total (SSTO) than Model 2."
+            },
+            {
+               "question_letter": "c",
+               "question": "Model 1 has a higher sum of square error (SSE) than Model 2."
+            },
+            {
+               "question_letter": "d",
+               "question": "The slope β1 on the first explanatory variable, X1, is the same in both models."
+            }
+         ]
+      },
+      {
+         "question_number": "3",
+         "question_context": "This question will use the pulse.txt dataset we have been using. Let the response Y be Rest (resting heart rate), and covariates X1 be Height in inches (Hgt), X2 be Weight in pounds (Wgt) and X3 smoking status (Smoke, 1 for smokers and 0 for non-smokers).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Say we want a multiple linear regression model with all the covariates listed in it, along with an interaction between height and weight. Write out this population model."
+            },
+            {
+               "question_letter": "b",
+               "question": "Why does it make sense to have an interaction between weight and height in the model? Explain."
+            },
+            {
+               "question_letter": "c",
+               "question": "Fit the model from part a. in R and write out the estimated model. What is the adjusted R-squared value?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What is the estimated SSE (sum of squared errors) of your model? Use the R output from the summary(model), along with some formulas, to compute this."
+            },
+            {
+               "question_letter": "e",
+               "question": "Test if your model has any significance. Write out the null and alternative hypothesis, the test statistic (and what distribution it follows), p-value, and make a conclusion."
+            },
+            {
+               "question_letter": "f",
+               "question": "Test the interaction term between height and weight. State the null and alternative hypothesis and p-value. What can you conclude with respect to the effect of height and weight on the response of resting heart rate?"
+            },
+            {
+               "question_letter": "g",
+               "question": "Now a researcher states that you do not need weight in the model in any way or form. Write out the null and alternative hypothesis for this (write it out in terms of slope coefficients)."
+            },
+            {
+               "question_letter": "h",
+               "question": "Conduct the test from part g. Make a conclusion in context of the study."
+            },
+            {
+               "question_letter": "i",
+               "question": "Show the output from R for the sequential sum of regressions table (keep the order of X1, X2, X3, and X1X2 in your model). Does adding weight when height is already in the model add to the explanatory strength of the model?"
+            },
+            {
+               "question_letter": "j",
+               "question": "Using the sequential sum of regression table from part i, what is the SSTO (sum of squared total) for this model?"
+            },
+            {
+               "question_letter": "k",
+               "question": "Now say you have a model with only height in it. From your table in part i, what is the SSE, SSR, and SSTO of this model with only height as covariate? Note: Do not run a new model, use the table from part i."
+            },
+            {
+               "question_letter": "l",
+               "question": "Explain in a few sentences how daily exercise amount could be a potential confounder in the model from part a."
+            },
+            {
+               "question_letter": "m",
+               "question": "Using the model from part a., create and present the scatterplot of the residual versus fitted values (fitted values go on the X-axis)."
+            },
+            {
+               "question_letter": "n",
+               "question": "Is there any evidence that our assumption of constant variance (a single σ2 for the entire model) is invalid?"
+            },
+            {
+               "question_letter": "o",
+               "question": "Using the residual vs. fitted plot from part m., comment on the linearity assumption of the model that was fit."
+            },
+            {
+               "question_letter": "p",
+               "question": "Using the model from part a., now create a QQ plot of the residuals. Do we seem to have any issues with our normality assumption for the errors?"
+            },
+            {
+               "question_letter": "q",
+               "question": "Using the model from part a., do a summary(data) to see the summary statistics of the weight (Wgt) explanatory variable. Does it make sense to use your model from part a. to predict the resting heart rate for someone who weighs 350 pounds? Why or why not."
+            }
+         ]
+      },
+      {
+         "question_number": "4",
+         "question_context": "An environmental expert is interested in modeling the concentration of various chemicals in well water over time.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Predict the amount of arsenic (Arsenic) in a well based on Year, the distance (Miles) from a mining site, and the interaction of these two variables."
+            },
+            {
+               "question_letter": "b",
+               "question": "Predict the amount of lead (Lead) in a well based on Year with two different lines depending on whether or not the well has been cleaned (Iclean)."
+            },
+            {
+               "question_letter": "c",
+               "question": "Predict the amount of titanium (Titanium) in a well based on a possible quadratic relationship with the distance (Miles) from a mining site."
+            },
+            {
+               "question_letter": "d",
+               "question": "Predict the amount of sulﬁde (Sulﬁde) in a well based on Year, distance (Miles) from a mining site, depth (Depth) of the well, and any interactions of pairs of explanatory variables."
+            }
+         ]
+      },
+      {
+         "question_number": "5",
+         "question_context": "This question will use the ThreeCars.txt dataset on our class Canvas page. The response variable is Price (the price of the car) and the explanatory variable is Mileage (miles of the car in 1000’s of miles).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Create a scatterplot of Mileage on the X-axis and Price on the Y-axis. Show the plot and comment on what you see with respect to the association between Mileage and Price."
+            },
+            {
+               "question_letter": "b",
+               "question": "Fit a simple linear regression model with the response being Price and the covariate being Mileage. Show the residuals plot versus fitted values plot."
+            },
+            {
+               "question_letter": "c",
+               "question": "What do you see in the plot from part b. with respect to the linear relationship between Mileage and Price?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What do you see in the plot from part b. with respect to the constant variance assumption of the linear regression model?"
+            },
+            {
+               "question_letter": "e",
+               "question": "Create a qq-plot of the residuals, and comment on the normality of the errors assumption."
+            }
+         ]
+      }
+   ]
+}
+
+{
+   "Homework_Number": "3",
+   "Question_List": [
+      {
+         "question_number": "1",
+         "question_context": "Say we have two quantitive explanatory variables, X1 and X2, and a quantitative continuous response Y. Say we have two population models.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Is Model 1 nested under Model 2? Yes or no."
+            },
+            {
+               "question_letter": "b",
+               "question": "In Model 1, what would a null hypothesis of β1 = 0 imply with how X1 affects the response?"
+            },
+            {
+               "question_letter": "c",
+               "question": "In Model 2, if β3 is not equal to 0, what does that imply with how X1 is affecting Y. Explain in a sentence or two."
+            },
+            {
+               "question_letter": "d",
+               "question": "In Model 2, given that X1 is in the model already, say you want to test if X2 affects the response directly or indirectly (through X1). What should be the null and alternative be?"
+            },
+            {
+               "question_letter": "e",
+               "question": "In Model 2, if you want to test if X1 and X2 have any association with Y, what would the null and alternative be?"
+            },
+            {
+               "question_letter": "f",
+               "question": "In Model 2, now say X2 is a categorical yes/no covariate (0 for no and 1 for yes). Interpret the effect of X1 on the response variable Y."
+            }
+         ]
+      },
+      {
+         "question_number": "2",
+         "question_context": "Say you have two models with respect to the same response variable Y. Model 1 has all the p-many explanatory variables that Model 2 has but also an additional new explanatory variable.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "The adjusted R-squared (not the regular R squared, but the adjusted one) of Model 1 is more than Model 2."
+            },
+            {
+               "question_letter": "b",
+               "question": "Model 1 has a higher sum of square total (SSTO) than Model 2."
+            },
+            {
+               "question_letter": "c",
+               "question": "Model 1 has a higher sum of square error (SSE) than Model 2."
+            },
+            {
+               "question_letter": "d",
+               "question": "The slope β1 on the first explanatory variable, X1, is the same in both models."
+            }
+         ]
+      },
+      {
+         "question_number": "3",
+         "question_context": "This question will use the pulse.txt dataset we have been using. Let the response Y be Rest (resting heart rate), and covariates X1 be Height in inches (Hgt), X2 be Weight in pounds (Wgt) and X3 smoking status (Smoke, 1 for smokers and 0 for non-smokers).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Say we want a multiple linear regression model with all the covariates listed in it, along with an interaction between height and weight. Write out this population model."
+            },
+            {
+               "question_letter": "b",
+               "question": "Why does it make sense to have an interaction between weight and height in the model? Explain."
+            },
+            {
+               "question_letter": "c",
+               "question": "Fit the model from part a. in R and write out the estimated model. What is the adjusted R-squared value?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What is the estimated SSE (sum of squared errors) of your model? Use the R output from the summary(model), along with some formulas, to compute this."
+            },
+            {
+               "question_letter": "e",
+               "question": "Test if your model has any significance. Write out the null and alternative hypothesis, the test statistic (and what distribution it follows), p-value, and make a conclusion."
+            },
+            {
+               "question_letter": "f",
+               "question": "Test the interaction term between height and weight. State the null and alternative hypothesis and p-value. What can you conclude with respect to the effect of height and weight on the response of resting heart rate?"
+            },
+            {
+               "question_letter": "g",
+               "question": "Now a researcher states that you do not need weight in the model in any way or form. Write out the null and alternative hypothesis for this (write it out in terms of slope coefficients)."
+            },
+            {
+               "question_letter": "h",
+               "question": "Conduct the test from part g. Make a conclusion in context of the study."
+            },
+            {
+               "question_letter": "i",
+               "question": "Show the output from R for the sequential sum of regressions table (keep the order of X1, X2, X3, and X1X2 in your model). Does adding weight when height is already in the model add to the explanatory strength of the model?"
+            },
+            {
+               "question_letter": "j",
+               "question": "Using the sequential sum of regression table from part i, what is the SSTO (sum of squared total) for this model?"
+            },
+            {
+               "question_letter": "k",
+               "question": "Now say you have a model with only height in it. From your table in part i, what is the SSE, SSR, and SSTO of this model with only height as covariate? Note: Do not run a new model, use the table from part i."
+            },
+            {
+               "question_letter": "l",
+               "question": "Explain in a few sentences how daily exercise amount could be a potential confounder in the model from part a."
+            },
+            {
+               "question_letter": "m",
+               "question": "Using the model from part a., create and present the scatterplot of the residual versus fitted values (fitted values go on the X-axis)."
+            },
+            {
+               "question_letter": "n",
+               "question": "Is there any evidence that our assumption of constant variance (a single σ2 for the entire model) is invalid?"
+            },
+            {
+               "question_letter": "o",
+               "question": "Using the residual vs. fitted plot from part m., comment on the linearity assumption of the model that was fit."
+            },
+            {
+               "question_letter": "p",
+               "question": "Using the model from part a., now create a QQ plot of the residuals. Do we seem to have any issues with our normality assumption for the errors?"
+            },
+            {
+               "question_letter": "q",
+               "question": "Using the model from part a., do a summary(data) to see the summary statistics of the weight (Wgt) explanatory variable. Does it make sense to use your model from part a. to predict the resting heart rate for someone who weighs 350 pounds? Why or why not."
+            }
+         ]
+      },
+      {
+         "question_number": "4",
+         "question_context": "An environmental expert is interested in modeling the concentration of various chemicals in well water over time.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Predict the amount of arsenic (Arsenic) in a well based on Year, the distance (Miles) from a mining site, and the interaction of these two variables."
+            },
+            {
+               "question_letter": "b",
+               "question": "Predict the amount of lead (Lead) in a well based on Year with two different lines depending on whether or not the well has been cleaned (Iclean)."
+            },
+            {
+               "question_letter": "c",
+               "question": "Predict the amount of titanium (Titanium) in a well based on a possible quadratic relationship with the distance (Miles) from a mining site."
+            },
+            {
+               "question_letter": "d",
+               "question": "Predict the amount of sulﬁde (Sulﬁde) in a well based on Year, distance (Miles) from a mining site, depth (Depth) of the well, and any interactions of pairs of explanatory variables."
+            }
+         ]
+      },
+      {
+         "question_number": "5",
+         "question_context": "This question will use the ThreeCars.txt dataset on our class Canvas page. The response variable is Price (the price of the car) and the explanatory variable is Mileage (miles of the car in 1000’s of miles).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Create a scatterplot of Mileage on the X-axis and Price on the Y-axis. Show the plot and comment on what you see with respect to the association between Mileage and Price."
+            },
+            {
+               "question_letter": "b",
+               "question": "Fit a simple linear regression model with the response being Price and the covariate being Mileage. Show the residuals plot versus fitted values plot."
+            },
+            {
+               "question_letter": "c",
+               "question": "What do you see in the plot from part b. with respect to the linear relationship between Mileage and Price?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What do you see in the plot from part b. with respect to the constant variance assumption of the linear regression model?"
+            },
+            {
+               "question_letter": "e",
+               "question": "Create a qq-plot of the residuals, and comment on the normality of the errors assumption."
+            }
+         ]
+      }
+   ]
+}
+
+{
+   "Homework_Number": "3",
+   "Question_List": [
+      {
+         "question_number": "1",
+         "question_context": "Say we have two quantitive explanatory variables, X1 and X2, and a quantitative continuous response Y. Say we have two population models.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Is Model 1 nested under Model 2? Yes or no."
+            },
+            {
+               "question_letter": "b",
+               "question": "In Model 1, what would a null hypothesis of β1 = 0 imply with how X1 affects the response?"
+            },
+            {
+               "question_letter": "c",
+               "question": "In Model 2, if β3 is not equal to 0, what does that imply with how X1 is affecting Y. Explain in a sentence or two."
+            },
+            {
+               "question_letter": "d",
+               "question": "In Model 2, given that X1 is in the model already, say you want to test if X2 affects the response directly or indirectly (through X1). What should be the null and alternative be?"
+            },
+            {
+               "question_letter": "e",
+               "question": "In Model 2, if you want to test if X1 and X2 have any association with Y, what would the null and alternative be?"
+            },
+            {
+               "question_letter": "f",
+               "question": "In Model 2, now say X2 is a categorical yes/no covariate (0 for no and 1 for yes). Interpret the effect of X1 on the response variable Y."
+            }
+         ]
+      },
+      {
+         "question_number": "2",
+         "question_context": "Say you have two models with respect to the same response variable Y. Model 1 has all the p-many explanatory variables that Model 2 has but also an additional new explanatory variable.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "The adjusted R-squared (not the regular R squared, but the adjusted one) of Model 1 is more than Model 2."
+            },
+            {
+               "question_letter": "b",
+               "question": "Model 1 has a higher sum of square total (SSTO) than Model 2."
+            },
+            {
+               "question_letter": "c",
+               "question": "Model 1 has a higher sum of square error (SSE) than Model 2."
+            },
+            {
+               "question_letter": "d",
+               "question": "The slope β1 on the first explanatory variable, X1, is the same in both models."
+            }
+         ]
+      },
+      {
+         "question_number": "3",
+         "question_context": "This question will use the pulse.txt dataset we have been using. Let the response Y be Rest (resting heart rate), and covariates X1 be Height in inches (Hgt), X2 be Weight in pounds (Wgt) and X3 smoking status (Smoke, 1 for smokers and 0 for non-smokers).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Say we want a multiple linear regression model with all the covariates listed in it, along with an interaction between height and weight. Write out this population model."
+            },
+            {
+               "question_letter": "b",
+               "question": "Why does it make sense to have an interaction between weight and height in the model? Explain."
+            },
+            {
+               "question_letter": "c",
+               "question": "Fit the model from part a. in R and write out the estimated model. What is the adjusted R-squared value?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What is the estimated SSE (sum of squared errors) of your model? Use the R output from the summary(model), along with some formulas, to compute this."
+            },
+            {
+               "question_letter": "e",
+               "question": "Test if your model has any significance. Write out the null and alternative hypothesis, the test statistic (and what distribution it follows), p-value, and make a conclusion."
+            },
+            {
+               "question_letter": "f",
+               "question": "Test the interaction term between height and weight. State the null and alternative hypothesis and p-value. What can you conclude with respect to the effect of height and weight on the response of resting heart rate?"
+            },
+            {
+               "question_letter": "g",
+               "question": "Now a researcher states that you do not need weight in the model in any way or form. Write out the null and alternative hypothesis for this (write it out in terms of slope coefficients)."
+            },
+            {
+               "question_letter": "h",
+               "question": "Conduct the test from part g. Make a conclusion in context of the study."
+            },
+            {
+               "question_letter": "i",
+               "question": "Show the output from R for the sequential sum of regressions table (keep the order of X1, X2, X3, and X1X2 in your model). Does adding weight when height is already in the model add to the explanatory strength of the model?"
+            },
+            {
+               "question_letter": "j",
+               "question": "Using the sequential sum of regression table from part i, what is the SSTO (sum of squared total) for this model?"
+            },
+            {
+               "question_letter": "k",
+               "question": "Now say you have a model with only height in it. From your table in part i, what is the SSE, SSR, and SSTO of this model with only height as covariate? Note: Do not run a new model, use the table from part i."
+            },
+            {
+               "question_letter": "l",
+               "question": "Explain in a few sentences how daily exercise amount could be a potential confounder in the model from part a."
+            },
+            {
+               "question_letter": "m",
+               "question": "Using the model from part a., create and present the scatterplot of the residual versus fitted values (fitted values go on the X-axis)."
+            },
+            {
+               "question_letter": "n",
+               "question": "Is there any evidence that our assumption of constant variance (a single σ2 for the entire model) is invalid?"
+            },
+            {
+               "question_letter": "o",
+               "question": "Using the residual vs. fitted plot from part m., comment on the linearity assumption of the model that was fit."
+            },
+            {
+               "question_letter": "p",
+               "question": "Using the model from part a., now create a QQ plot of the residuals. Do we seem to have any issues with our normality assumption for the errors?"
+            },
+            {
+               "question_letter": "q",
+               "question": "Using the model from part a., do a summary(data) to see the summary statistics of the weight (Wgt) explanatory variable. Does it make sense to use your model from part a. to predict the resting heart rate for someone who weighs 350 pounds? Why or why not."
+            }
+         ]
+      },
+      {
+         "question_number": "4",
+         "question_context": "An environmental expert is interested in modeling the concentration of various chemicals in well water over time.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Predict the amount of arsenic (Arsenic) in a well based on Year, the distance (Miles) from a mining site, and the interaction of these two variables."
+            },
+            {
+               "question_letter": "b",
+               "question": "Predict the amount of lead (Lead) in a well based on Year with two different lines depending on whether or not the well has been cleaned (Iclean)."
+            },
+            {
+               "question_letter": "c",
+               "question": "Predict the amount of titanium (Titanium) in a well based on a possible quadratic relationship with the distance (Miles) from a mining site."
+            },
+            {
+               "question_letter": "d",
+               "question": "Predict the amount of sulﬁde (Sulﬁde) in a well based on Year, distance (Miles) from a mining site, depth (Depth) of the well, and any interactions of pairs of explanatory variables."
+            }
+         ]
+      },
+      {
+         "question_number": "5",
+         "question_context": "This question will use the ThreeCars.txt dataset on our class Canvas page. The response variable is Price (the price of the car) and the explanatory variable is Mileage (miles of the car in 1000’s of miles).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Create a scatterplot of Mileage on the X-axis and Price on the Y-axis. Show the plot and comment on what you see with respect to the association between Mileage and Price."
+            },
+            {
+               "question_letter": "b",
+               "question": "Fit a simple linear regression model with the response being Price and the covariate being Mileage. Show the residuals plot versus fitted values plot."
+            },
+            {
+               "question_letter": "c",
+               "question": "What do you see in the plot from part b. with respect to the linear relationship between Mileage and Price?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What do you see in the plot from part b. with respect to the constant variance assumption of the linear regression model?"
+            },
+            {
+               "question_letter": "e",
+               "question": "Create a qq-plot of the residuals, and comment on the normality of the errors assumption."
+            }
+         ]
+      }
+   ]
+}
+
+{
+   "Homework_Number": "3",
+   "Question_List": [
+      {
+         "question_number": "1",
+         "question_context": "Say we have two quantitive explanatory variables, X1 and X2, and a quantitative continuous response Y. Say we have two population models.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Is Model 1 nested under Model 2? Yes or no."
+            },
+            {
+               "question_letter": "b",
+               "question": "In Model 1, what would a null hypothesis of β1 = 0 imply with how X1 affects the response?"
+            },
+            {
+               "question_letter": "c",
+               "question": "In Model 2, if β3 is not equal to 0, what does that imply with how X1 is affecting Y. Explain in a sentence or two."
+            },
+            {
+               "question_letter": "d",
+               "question": "In Model 2, given that X1 is in the model already, say you want to test if X2 affects the response directly or indirectly (through X1). What should be the null and alternative be?"
+            },
+            {
+               "question_letter": "e",
+               "question": "In Model 2, if you want to test if X1 and X2 have any association with Y, what would the null and alternative be?"
+            },
+            {
+               "question_letter": "f",
+               "question": "In Model 2, now say X2 is a categorical yes/no covariate (0 for no and 1 for yes). Interpret the effect of X1 on the response variable Y."
+            }
+         ]
+      },
+      {
+         "question_number": "2",
+         "question_context": "Say you have two models with respect to the same response variable Y. Model 1 has all the p-many explanatory variables that Model 2 has but also an additional new explanatory variable.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "The adjusted R-squared (not the regular R squared, but the adjusted one) of Model 1 is more than Model 2."
+            },
+            {
+               "question_letter": "b",
+               "question": "Model 1 has a higher sum of square total (SSTO) than Model 2."
+            },
+            {
+               "question_letter": "c",
+               "question": "Model 1 has a higher sum of square error (SSE) than Model 2."
+            },
+            {
+               "question_letter": "d",
+               "question": "The slope β1 on the first explanatory variable, X1, is the same in both models."
+            }
+         ]
+      },
+      {
+         "question_number": "3",
+         "question_context": "This question will use the pulse.txt dataset we have been using. Let the response Y be Rest (resting heart rate), and covariates X1 be Height in inches (Hgt), X2 be Weight in pounds (Wgt) and X3 smoking status (Smoke, 1 for smokers and 0 for non-smokers).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Say we want a multiple linear regression model with all the covariates listed in it, along with an interaction between height and weight. Write out this population model."
+            },
+            {
+               "question_letter": "b",
+               "question": "Why does it make sense to have an interaction between weight and height in the model? Explain."
+            },
+            {
+               "question_letter": "c",
+               "question": "Fit the model from part a. in R and write out the estimated model. What is the adjusted R-squared value?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What is the estimated SSE (sum of squared errors) of your model? Use the R output from the summary(model), along with some formulas, to compute this."
+            },
+            {
+               "question_letter": "e",
+               "question": "Test if your model has any significance. Write out the null and alternative hypothesis, the test statistic (and what distribution it follows), p-value, and make a conclusion."
+            },
+            {
+               "question_letter": "f",
+               "question": "Test the interaction term between height and weight. State the null and alternative hypothesis and p-value. What can you conclude with respect to the effect of height and weight on the response of resting heart rate?"
+            },
+            {
+               "question_letter": "g",
+               "question": "Now a researcher states that you do not need weight in the model in any way or form. Write out the null and alternative hypothesis for this (write it out in terms of slope coefficients)."
+            },
+            {
+               "question_letter": "h",
+               "question": "Conduct the test from part g. Make a conclusion in context of the study."
+            },
+            {
+               "question_letter": "i",
+               "question": "Show the output from R for the sequential sum of regressions table (keep the order of X1, X2, X3, and X1X2 in your model). Does adding weight when height is already in the model add to the explanatory strength of the model?"
+            },
+            {
+               "question_letter": "j",
+               "question": "Using the sequential sum of regression table from part i, what is the SSTO (sum of squared total) for this model?"
+            },
+            {
+               "question_letter": "k",
+               "question": "Now say you have a model with only height in it. From your table in part i, what is the SSE, SSR, and SSTO of this model with only height as covariate? Note: Do not run a new model, use the table from part i."
+            },
+            {
+               "question_letter": "l",
+               "question": "Explain in a few sentences how daily exercise amount could be a potential confounder in the model from part a."
+            },
+            {
+               "question_letter": "m",
+               "question": "Using the model from part a., create and present the scatterplot of the residual versus fitted values (fitted values go on the X-axis)."
+            },
+            {
+               "question_letter": "n",
+               "question": "Is there any evidence that our assumption of constant variance (a single σ2 for the entire model) is invalid?"
+            },
+            {
+               "question_letter": "o",
+               "question": "Using the residual vs. fitted plot from part m., comment on the linearity assumption of the model that was fit."
+            },
+            {
+               "question_letter": "p",
+               "question": "Using the model from part a., now create a QQ plot of the residuals. Do we seem to have any issues with our normality assumption for the errors?"
+            },
+            {
+               "question_letter": "q",
+               "question": "Using the model from part a., do a summary(data) to see the summary statistics of the weight (Wgt) explanatory variable. Does it make sense to use your model from part a. to predict the resting heart rate for someone who weighs 350 pounds? Why or why not."
+            }
+         ]
+      },
+      {
+         "question_number": "4",
+         "question_context": "An environmental expert is interested in modeling the concentration of various chemicals in well water over time.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Predict the amount of arsenic (Arsenic) in a well based on Year, the distance (Miles) from a mining site, and the interaction of these two variables."
+            },
+            {
+               "question_letter": "b",
+               "question": "Predict the amount of lead (Lead) in a well based on Year with two different lines depending on whether or not the well has been cleaned (Iclean)."
+            },
+            {
+               "question_letter": "c",
+               "question": "Predict the amount of titanium (Titanium) in a well based on a possible quadratic relationship with the distance (Miles) from a mining site."
+            },
+            {
+               "question_letter": "d",
+               "question": "Predict the amount of sulﬁde (Sulﬁde) in a well based on Year, distance (Miles) from a mining site, depth (Depth) of the well, and any interactions of pairs of explanatory variables."
+            }
+         ]
+      },
+      {
+         "question_number": "5",
+         "question_context": "This question will use the ThreeCars.txt dataset on our class Canvas page. The response variable is Price (the price of the car) and the explanatory variable is Mileage (miles of the car in 1000’s of miles).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Create a scatterplot of Mileage on the X-axis and Price on the Y-axis. Show the plot and comment on what you see with respect to the association between Mileage and Price."
+            },
+            {
+               "question_letter": "b",
+               "question": "Fit a simple linear regression model with the response being Price and the covariate being Mileage. Show the residuals plot versus fitted values plot."
+            },
+            {
+               "question_letter": "c",
+               "question": "What do you see in the plot from part b. with respect to the linear relationship between Mileage and Price?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What do you see in the plot from part b. with respect to the constant variance assumption of the linear regression model?"
+            },
+            {
+               "question_letter": "e",
+               "question": "Create a qq-plot of the residuals, and comment on the normality of the errors assumption."
+            }
+         ]
+      }
+   ]
+}
+
+{
+   "Homework_Number": "3",
+   "Question_List": [
+      {
+         "question_number": "1",
+         "question_context": "Say we have two quantitive explanatory variables, X1 and X2, and a quantitative continuous response Y. Say we have two population models.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Is Model 1 nested under Model 2? Yes or no."
+            },
+            {
+               "question_letter": "b",
+               "question": "In Model 1, what would a null hypothesis of β1 = 0 imply with how X1 affects the response?"
+            },
+            {
+               "question_letter": "c",
+               "question": "In Model 2, if β3 is not equal to 0, what does that imply with how X1 is affecting Y. Explain in a sentence or two."
+            },
+            {
+               "question_letter": "d",
+               "question": "In Model 2, given that X1 is in the model already, say you want to test if X2 affects the response directly or indirectly (through X1). What should be the null and alternative be?"
+            },
+            {
+               "question_letter": "e",
+               "question": "In Model 2, if you want to test if X1 and X2 have any association with Y, what would the null and alternative be?"
+            },
+            {
+               "question_letter": "f",
+               "question": "In Model 2, now say X2 is a categorical yes/no covariate (0 for no and 1 for yes). Interpret the effect of X1 on the response variable Y."
+            }
+         ]
+      },
+      {
+         "question_number": "2",
+         "question_context": "Say you have two models with respect to the same response variable Y. Model 1 has all the p-many explanatory variables that Model 2 has but also an additional new explanatory variable.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "The adjusted R-squared (not the regular R squared, but the adjusted one) of Model 1 is more than Model 2."
+            },
+            {
+               "question_letter": "b",
+               "question": "Model 1 has a higher sum of square total (SSTO) than Model 2."
+            },
+            {
+               "question_letter": "c",
+               "question": "Model 1 has a higher sum of square error (SSE) than Model 2."
+            },
+            {
+               "question_letter": "d",
+               "question": "The slope β1 on the first explanatory variable, X1, is the same in both models."
+            }
+         ]
+      },
+      {
+         "question_number": "3",
+         "question_context": "This question will use the pulse.txt dataset we have been using. Let the response Y be Rest (resting heart rate), and covariates X1 be Height in inches (Hgt), X2 be Weight in pounds (Wgt) and X3 smoking status (Smoke, 1 for smokers and 0 for non-smokers).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Say we want a multiple linear regression model with all the covariates listed in it, along with an interaction between height and weight. Write out this population model."
+            },
+            {
+               "question_letter": "b",
+               "question": "Why does it make sense to have an interaction between weight and height in the model? Explain."
+            },
+            {
+               "question_letter": "c",
+               "question": "Fit the model from part a. in R and write out the estimated model. What is the adjusted R-squared value?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What is the estimated SSE (sum of squared errors) of your model? Use the R output from the summary(model), along with some formulas, to compute this."
+            },
+            {
+               "question_letter": "e",
+               "question": "Test if your model has any significance. Write out the null and alternative hypothesis, the test statistic (and what distribution it follows), p-value, and make a conclusion."
+            },
+            {
+               "question_letter": "f",
+               "question": "Test the interaction term between height and weight. State the null and alternative hypothesis and p-value. What can you conclude with respect to the effect of height and weight on the response of resting heart rate?"
+            },
+            {
+               "question_letter": "g",
+               "question": "Now a researcher states that you do not need weight in the model in any way or form. Write out the null and alternative hypothesis for this (write it out in terms of slope coefficients)."
+            },
+            {
+               "question_letter": "h",
+               "question": "Conduct the test from part g. Make a conclusion in context of the study."
+            },
+            {
+               "question_letter": "i",
+               "question": "Show the output from R for the sequential sum of regressions table (keep the order of X1, X2, X3, and X1X2 in your model). Does adding weight when height is already in the model add to the explanatory strength of the model?"
+            },
+            {
+               "question_letter": "j",
+               "question": "Using the sequential sum of regression table from part i, what is the SSTO (sum of squared total) for this model?"
+            },
+            {
+               "question_letter": "k",
+               "question": "Now say you have a model with only height in it. From your table in part i, what is the SSE, SSR, and SSTO of this model with only height as covariate? Note: Do not run a new model, use the table from part i."
+            },
+            {
+               "question_letter": "l",
+               "question": "Explain in a few sentences how daily exercise amount could be a potential confounder in the model from part a."
+            },
+            {
+               "question_letter": "m",
+               "question": "Using the model from part a., create and present the scatterplot of the residual versus fitted values (fitted values go on the X-axis)."
+            },
+            {
+               "question_letter": "n",
+               "question": "Is there any evidence that our assumption of constant variance (a single σ2 for the entire model) is invalid?"
+            },
+            {
+               "question_letter": "o",
+               "question": "Using the residual vs. fitted plot from part m., comment on the linearity assumption of the model that was fit."
+            },
+            {
+               "question_letter": "p",
+               "question": "Using the model from part a., now create a QQ plot of the residuals. Do we seem to have any issues with our normality assumption for the errors?"
+            },
+            {
+               "question_letter": "q",
+               "question": "Using the model from part a., do a summary(data) to see the summary statistics of the weight (Wgt) explanatory variable. Does it make sense to use your model from part a. to predict the resting heart rate for someone who weighs 350 pounds? Why or why not."
+            }
+         ]
+      },
+      {
+         "question_number": "4",
+         "question_context": "An environmental expert is interested in modeling the concentration of various chemicals in well water over time.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Predict the amount of arsenic (Arsenic) in a well based on Year, the distance (Miles) from a mining site, and the interaction of these two variables."
+            },
+            {
+               "question_letter": "b",
+               "question": "Predict the amount of lead (Lead) in a well based on Year with two different lines depending on whether or not the well has been cleaned (Iclean)."
+            },
+            {
+               "question_letter": "c",
+               "question": "Predict the amount of titanium (Titanium) in a well based on a possible quadratic relationship with the distance (Miles) from a mining site."
+            },
+            {
+               "question_letter": "d",
+               "question": "Predict the amount of sulﬁde (Sulﬁde) in a well based on Year, distance (Miles) from a mining site, depth (Depth) of the well, and any interactions of pairs of explanatory variables."
+            }
+         ]
+      },
+      {
+         "question_number": "5",
+         "question_context": "This question will use the ThreeCars.txt dataset on our class Canvas page. The response variable is Price (the price of the car) and the explanatory variable is Mileage (miles of the car in 1000’s of miles).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Create a scatterplot of Mileage on the X-axis and Price on the Y-axis. Show the plot and comment on what you see with respect to the association between Mileage and Price."
+            },
+            {
+               "question_letter": "b",
+               "question": "Fit a simple linear regression model with the response being Price and the covariate being Mileage. Show the residuals plot versus fitted values plot."
+            },
+            {
+               "question_letter": "c",
+               "question": "What do you see in the plot from part b. with respect to the linear relationship between Mileage and Price?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What do you see in the plot from part b. with respect to the constant variance assumption of the linear regression model?"
+            },
+            {
+               "question_letter": "e",
+               "question": "Create a qq-plot of the residuals, and comment on the normality of the errors assumption."
+            }
+         ]
+      }
+   ]
+}
+
+{
+   "Homework_Number": "3",
+   "Question_List": [
+      {
+         "question_number": "1",
+         "question_context": "Say we have two quantitive explanatory variables, X1 and X2, and a quantitative continuous response Y. Say we have two population models.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Is Model 1 nested under Model 2? Yes or no."
+            },
+            {
+               "question_letter": "b",
+               "question": "In Model 1, what would a null hypothesis of β1 = 0 imply with how X1 affects the response?"
+            },
+            {
+               "question_letter": "c",
+               "question": "In Model 2, if β3 is not equal to 0, what does that imply with how X1 is affecting Y. Explain in a sentence or two."
+            },
+            {
+               "question_letter": "d",
+               "question": "In Model 2, given that X1 is in the model already, say you want to test if X2 affects the response directly or indirectly (through X1). What should be the null and alternative be?"
+            },
+            {
+               "question_letter": "e",
+               "question": "In Model 2, if you want to test if X1 and X2 have any association with Y, what would the null and alternative be?"
+            },
+            {
+               "question_letter": "f",
+               "question": "In Model 2, now say X2 is a categorical yes/no covariate (0 for no and 1 for yes). Interpret the effect of X1 on the response variable Y."
+            }
+         ]
+      },
+      {
+         "question_number": "2",
+         "question_context": "Say you have two models with respect to the same response variable Y. Model 1 has all the p-many explanatory variables that Model 2 has but also an additional new explanatory variable.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "The adjusted R-squared (not the regular R squared, but the adjusted one) of Model 1 is more than Model 2."
+            },
+            {
+               "question_letter": "b",
+               "question": "Model 1 has a higher sum of square total (SSTO) than Model 2."
+            },
+            {
+               "question_letter": "c",
+               "question": "Model 1 has a higher sum of square error (SSE) than Model 2."
+            },
+            {
+               "question_letter": "d",
+               "question": "The slope β1 on the first explanatory variable, X1, is the same in both models."
+            }
+         ]
+      },
+      {
+         "question_number": "3",
+         "question_context": "This question will use the pulse.txt dataset we have been using. Let the response Y be Rest (resting heart rate), and covariates X1 be Height in inches (Hgt), X2 be Weight in pounds (Wgt) and X3 smoking status (Smoke, 1 for smokers and 0 for non-smokers).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Say we want a multiple linear regression model with all the covariates listed in it, along with an interaction between height and weight. Write out this population model."
+            },
+            {
+               "question_letter": "b",
+               "question": "Why does it make sense to have an interaction between weight and height in the model? Explain."
+            },
+            {
+               "question_letter": "c",
+               "question": "Fit the model from part a. in R and write out the estimated model. What is the adjusted R-squared value?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What is the estimated SSE (sum of squared errors) of your model? Use the R output from the summary(model), along with some formulas, to compute this."
+            },
+            {
+               "question_letter": "e",
+               "question": "Test if your model has any significance. Write out the null and alternative hypothesis, the test statistic (and what distribution it follows), p-value, and make a conclusion."
+            },
+            {
+               "question_letter": "f",
+               "question": "Test the interaction term between height and weight. State the null and alternative hypothesis and p-value. What can you conclude with respect to the effect of height and weight on the response of resting heart rate?"
+            },
+            {
+               "question_letter": "g",
+               "question": "Now a researcher states that you do not need weight in the model in any way or form. Write out the null and alternative hypothesis for this (write it out in terms of slope coefficients)."
+            },
+            {
+               "question_letter": "h",
+               "question": "Conduct the test from part g. Make a conclusion in context of the study."
+            },
+            {
+               "question_letter": "i",
+               "question": "Show the output from R for the sequential sum of regressions table (keep the order of X1, X2, X3, and X1X2 in your model). Does adding weight when height is already in the model add to the explanatory strength of the model?"
+            },
+            {
+               "question_letter": "j",
+               "question": "Using the sequential sum of regression table from part i, what is the SSTO (sum of squared total) for this model?"
+            },
+            {
+               "question_letter": "k",
+               "question": "Now say you have a model with only height in it. From your table in part i, what is the SSE, SSR, and SSTO of this model with only height as covariate? Note: Do not run a new model, use the table from part i."
+            },
+            {
+               "question_letter": "l",
+               "question": "Explain in a few sentences how daily exercise amount could be a potential confounder in the model from part a."
+            },
+            {
+               "question_letter": "m",
+               "question": "Using the model from part a., create and present the scatterplot of the residual versus fitted values (fitted values go on the X-axis)."
+            },
+            {
+               "question_letter": "n",
+               "question": "Is there any evidence that our assumption of constant variance (a single σ2 for the entire model) is invalid?"
+            },
+            {
+               "question_letter": "o",
+               "question": "Using the residual vs. fitted plot from part m., comment on the linearity assumption of the model that was fit."
+            },
+            {
+               "question_letter": "p",
+               "question": "Using the model from part a., now create a QQ plot of the residuals. Do we seem to have any issues with our normality assumption for the errors?"
+            },
+            {
+               "question_letter": "q",
+               "question": "Using the model from part a., do a summary(data) to see the summary statistics of the weight (Wgt) explanatory variable. Does it make sense to use your model from part a. to predict the resting heart rate for someone who weighs 350 pounds? Why or why not."
+            }
+         ]
+      },
+      {
+         "question_number": "4",
+         "question_context": "An environmental expert is interested in modeling the concentration of various chemicals in well water over time.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Predict the amount of arsenic (Arsenic) in a well based on Year, the distance (Miles) from a mining site, and the interaction of these two variables."
+            },
+            {
+               "question_letter": "b",
+               "question": "Predict the amount of lead (Lead) in a well based on Year with two different lines depending on whether or not the well has been cleaned (Iclean)."
+            },
+            {
+               "question_letter": "c",
+               "question": "Predict the amount of titanium (Titanium) in a well based on a possible quadratic relationship with the distance (Miles) from a mining site."
+            },
+            {
+               "question_letter": "d",
+               "question": "Predict the amount of sulﬁde (Sulﬁde) in a well based on Year, distance (Miles) from a mining site, depth (Depth) of the well, and any interactions of pairs of explanatory variables."
+            }
+         ]
+      },
+      {
+         "question_number": "5",
+         "question_context": "This question will use the ThreeCars.txt dataset on our class Canvas page. The response variable is Price (the price of the car) and the explanatory variable is Mileage (miles of the car in 1000’s of miles).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Create a scatterplot of Mileage on the X-axis and Price on the Y-axis. Show the plot and comment on what you see with respect to the association between Mileage and Price."
+            },
+            {
+               "question_letter": "b",
+               "question": "Fit a simple linear regression model with the response being Price and the covariate being Mileage. Show the residuals plot versus fitted values plot."
+            },
+            {
+               "question_letter": "c",
+               "question": "What do you see in the plot from part b. with respect to the linear relationship between Mileage and Price?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What do you see in the plot from part b. with respect to the constant variance assumption of the linear regression model?"
+            },
+            {
+               "question_letter": "e",
+               "question": "Create a qq-plot of the residuals, and comment on the normality of the errors assumption."
+            }
+         ]
+      }
+   ]
+}
+
+{
+   "Homework_Number": "3",
+   "Question_List": [
+      {
+         "question_number": "1",
+         "question_context": "Say we have two quantitive explanatory variables, X1 and X2, and a quantitative continuous response Y. Say we have two population models.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Is Model 1 nested under Model 2? Yes or no."
+            },
+            {
+               "question_letter": "b",
+               "question": "In Model 1, what would a null hypothesis of β1 = 0 imply with how X1 affects the response?"
+            },
+            {
+               "question_letter": "c",
+               "question": "In Model 2, if β3 is not equal to 0, what does that imply with how X1 is affecting Y. Explain in a sentence or two."
+            },
+            {
+               "question_letter": "d",
+               "question": "In Model 2, given that X1 is in the model already, say you want to test if X2 affects the response directly or indirectly (through X1). What should be the null and alternative be?"
+            },
+            {
+               "question_letter": "e",
+               "question": "In Model 2, if you want to test if X1 and X2 have any association with Y, what would the null and alternative be?"
+            },
+            {
+               "question_letter": "f",
+               "question": "In Model 2, now say X2 is a categorical yes/no covariate (0 for no and 1 for yes). Interpret the effect of X1 on the response variable Y."
+            }
+         ]
+      },
+      {
+         "question_number": "2",
+         "question_context": "Say you have two models with respect to the same response variable Y. Model 1 has all the p-many explanatory variables that Model 2 has but also an additional new explanatory variable.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "The adjusted R-squared (not the regular R squared, but the adjusted one) of Model 1 is more than Model 2."
+            },
+            {
+               "question_letter": "b",
+               "question": "Model 1 has a higher sum of square total (SSTO) than Model 2."
+            },
+            {
+               "question_letter": "c",
+               "question": "Model 1 has a higher sum of square error (SSE) than Model 2."
+            },
+            {
+               "question_letter": "d",
+               "question": "The slope β1 on the first explanatory variable, X1, is the same in both models."
+            }
+         ]
+      },
+      {
+         "question_number": "3",
+         "question_context": "This question will use the pulse.txt dataset we have been using. Let the response Y be Rest (resting heart rate), and covariates X1 be Height in inches (Hgt), X2 be Weight in pounds (Wgt) and X3 smoking status (Smoke, 1 for smokers and 0 for non-smokers).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Say we want a multiple linear regression model with all the covariates listed in it, along with an interaction between height and weight. Write out this population model."
+            },
+            {
+               "question_letter": "b",
+               "question": "Why does it make sense to have an interaction between weight and height in the model? Explain."
+            },
+            {
+               "question_letter": "c",
+               "question": "Fit the model from part a. in R and write out the estimated model. What is the adjusted R-squared value?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What is the estimated SSE (sum of squared errors) of your model? Use the R output from the summary(model), along with some formulas, to compute this."
+            },
+            {
+               "question_letter": "e",
+               "question": "Test if your model has any significance. Write out the null and alternative hypothesis, the test statistic (and what distribution it follows), p-value, and make a conclusion."
+            },
+            {
+               "question_letter": "f",
+               "question": "Test the interaction term between height and weight. State the null and alternative hypothesis and p-value. What can you conclude with respect to the effect of height and weight on the response of resting heart rate?"
+            },
+            {
+               "question_letter": "g",
+               "question": "Now a researcher states that you do not need weight in the model in any way or form. Write out the null and alternative hypothesis for this (write it out in terms of slope coefficients)."
+            },
+            {
+               "question_letter": "h",
+               "question": "Conduct the test from part g. Make a conclusion in context of the study."
+            },
+            {
+               "question_letter": "i",
+               "question": "Show the output from R for the sequential sum of regressions table (keep the order of X1, X2, X3, and X1X2 in your model). Does adding weight when height is already in the model add to the explanatory strength of the model?"
+            },
+            {
+               "question_letter": "j",
+               "question": "Using the sequential sum of regression table from part i, what is the SSTO (sum of squared total) for this model?"
+            },
+            {
+               "question_letter": "k",
+               "question": "Now say you have a model with only height in it. From your table in part i, what is the SSE, SSR, and SSTO of this model with only height as covariate? Note: Do not run a new model, use the table from part i."
+            },
+            {
+               "question_letter": "l",
+               "question": "Explain in a few sentences how daily exercise amount could be a potential confounder in the model from part a."
+            },
+            {
+               "question_letter": "m",
+               "question": "Using the model from part a., create and present the scatterplot of the residual versus fitted values (fitted values go on the X-axis)."
+            },
+            {
+               "question_letter": "n",
+               "question": "Is there any evidence that our assumption of constant variance (a single σ2 for the entire model) is invalid?"
+            },
+            {
+               "question_letter": "o",
+               "question": "Using the residual vs. fitted plot from part m., comment on the linearity assumption of the model that was fit."
+            },
+            {
+               "question_letter": "p",
+               "question": "Using the model from part a., now create a QQ plot of the residuals. Do we seem to have any issues with our normality assumption for the errors?"
+            },
+            {
+               "question_letter": "q",
+               "question": "Using the model from part a., do a summary(data) to see the summary statistics of the weight (Wgt) explanatory variable. Does it make sense to use your model from part a. to predict the resting heart rate for someone who weighs 350 pounds? Why or why not."
+            }
+         ]
+      },
+      {
+         "question_number": "4",
+         "question_context": "An environmental expert is interested in modeling the concentration of various chemicals in well water over time.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Predict the amount of arsenic (Arsenic) in a well based on Year, the distance (Miles) from a mining site, and the interaction of these two variables."
+            },
+            {
+               "question_letter": "b",
+               "question": "Predict the amount of lead (Lead) in a well based on Year with two different lines depending on whether or not the well has been cleaned (Iclean)."
+            },
+            {
+               "question_letter": "c",
+               "question": "Predict the amount of titanium (Titanium) in a well based on a possible quadratic relationship with the distance (Miles) from a mining site."
+            },
+            {
+               "question_letter": "d",
+               "question": "Predict the amount of sulﬁde (Sulﬁde) in a well based on Year, distance (Miles) from a mining site, depth (Depth) of the well, and any interactions of pairs of explanatory variables."
+            }
+         ]
+      },
+      {
+         "question_number": "5",
+         "question_context": "This question will use the ThreeCars.txt dataset on our class Canvas page. The response variable is Price (the price of the car) and the explanatory variable is Mileage (miles of the car in 1000’s of miles).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Create a scatterplot of Mileage on the X-axis and Price on the Y-axis. Show the plot and comment on what you see with respect to the association between Mileage and Price."
+            },
+            {
+               "question_letter": "b",
+               "question": "Fit a simple linear regression model with the response being Price and the covariate being Mileage. Show the residuals plot versus fitted values plot."
+            },
+            {
+               "question_letter": "c",
+               "question": "What do you see in the plot from part b. with respect to the linear relationship between Mileage and Price?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What do you see in the plot from part b. with respect to the constant variance assumption of the linear regression model?"
+            },
+            {
+               "question_letter": "e",
+               "question": "Create a qq-plot of the residuals, and comment on the normality of the errors assumption."
+            }
+         ]
+      }
+   ]
+}
+
+{
+   "Homework_Number": "3",
+   "Question_List": [
+      {
+         "question_number": "1",
+         "question_context": "Say we have two quantitive explanatory variables, X1 and X2, and a quantitative continuous response Y. Say we have two population models.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Is Model 1 nested under Model 2? Yes or no."
+            },
+            {
+               "question_letter": "b",
+               "question": "In Model 1, what would a null hypothesis of β1 = 0 imply with how X1 affects the response?"
+            },
+            {
+               "question_letter": "c",
+               "question": "In Model 2, if β3 is not equal to 0, what does that imply with how X1 is affecting Y. Explain in a sentence or two."
+            },
+            {
+               "question_letter": "d",
+               "question": "In Model 2, given that X1 is in the model already, say you want to test if X2 affects the response directly or indirectly (through X1). What should be the null and alternative be?"
+            },
+            {
+               "question_letter": "e",
+               "question": "In Model 2, if you want to test if X1 and X2 have any association with Y, what would the null and alternative be?"
+            },
+            {
+               "question_letter": "f",
+               "question": "In Model 2, now say X2 is a categorical yes/no covariate (0 for no and 1 for yes). Interpret the effect of X1 on the response variable Y."
+            }
+         ]
+      },
+      {
+         "question_number": "2",
+         "question_context": "Say you have two models with respect to the same response variable Y. Model 1 has all the p-many explanatory variables that Model 2 has but also an additional new explanatory variable.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "The adjusted R-squared (not the regular R squared, but the adjusted one) of Model 1 is more than Model 2."
+            },
+            {
+               "question_letter": "b",
+               "question": "Model 1 has a higher sum of square total (SSTO) than Model 2."
+            },
+            {
+               "question_letter": "c",
+               "question": "Model 1 has a higher sum of square error (SSE) than Model 2."
+            },
+            {
+               "question_letter": "d",
+               "question": "The slope β1 on the first explanatory variable, X1, is the same in both models."
+            }
+         ]
+      },
+      {
+         "question_number": "3",
+         "question_context": "This question will use the pulse.txt dataset we have been using. Let the response Y be Rest (resting heart rate), and covariates X1 be Height in inches (Hgt), X2 be Weight in pounds (Wgt) and X3 smoking status (Smoke, 1 for smokers and 0 for non-smokers).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Say we want a multiple linear regression model with all the covariates listed in it, along with an interaction between height and weight. Write out this population model."
+            },
+            {
+               "question_letter": "b",
+               "question": "Why does it make sense to have an interaction between weight and height in the model? Explain."
+            },
+            {
+               "question_letter": "c",
+               "question": "Fit the model from part a. in R and write out the estimated model. What is the adjusted R-squared value?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What is the estimated SSE (sum of squared errors) of your model? Use the R output from the summary(model), along with some formulas, to compute this."
+            },
+            {
+               "question_letter": "e",
+               "question": "Test if your model has any significance. Write out the null and alternative hypothesis, the test statistic (and what distribution it follows), p-value, and make a conclusion."
+            },
+            {
+               "question_letter": "f",
+               "question": "Test the interaction term between height and weight. State the null and alternative hypothesis and p-value. What can you conclude with respect to the effect of height and weight on the response of resting heart rate?"
+            },
+            {
+               "question_letter": "g",
+               "question": "Now a researcher states that you do not need weight in the model in any way or form. Write out the null and alternative hypothesis for this (write it out in terms of slope coefficients)."
+            },
+            {
+               "question_letter": "h",
+               "question": "Conduct the test from part g. Make a conclusion in context of the study."
+            },
+            {
+               "question_letter": "i",
+               "question": "Show the output from R for the sequential sum of regressions table (keep the order of X1, X2, X3, and X1X2 in your model). Does adding weight when height is already in the model add to the explanatory strength of the model?"
+            },
+            {
+               "question_letter": "j",
+               "question": "Using the sequential sum of regression table from part i, what is the SSTO (sum of squared total) for this model?"
+            },
+            {
+               "question_letter": "k",
+               "question": "Now say you have a model with only height in it. From your table in part i, what is the SSE, SSR, and SSTO of this model with only height as covariate? Note: Do not run a new model, use the table from part i."
+            },
+            {
+               "question_letter": "l",
+               "question": "Explain in a few sentences how daily exercise amount could be a potential confounder in the model from part a."
+            },
+            {
+               "question_letter": "m",
+               "question": "Using the model from part a., create and present the scatterplot of the residual versus fitted values (fitted values go on the X-axis)."
+            },
+            {
+               "question_letter": "n",
+               "question": "Is there any evidence that our assumption of constant variance (a single σ2 for the entire model) is invalid?"
+            },
+            {
+               "question_letter": "o",
+               "question": "Using the residual vs. fitted plot from part m., comment on the linearity assumption of the model that was fit."
+            },
+            {
+               "question_letter": "p",
+               "question": "Using the model from part a., now create a QQ plot of the residuals. Do we seem to have any issues with our normality assumption for the errors?"
+            },
+            {
+               "question_letter": "q",
+               "question": "Using the model from part a., do a summary(data) to see the summary statistics of the weight (Wgt) explanatory variable. Does it make sense to use your model from part a. to predict the resting heart rate for someone who weighs 350 pounds? Why or why not."
+            }
+         ]
+      },
+      {
+         "question_number": "4",
+         "question_context": "An environmental expert is interested in modeling the concentration of various chemicals in well water over time.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Predict the amount of arsenic (Arsenic) in a well based on Year, the distance (Miles) from a mining site, and the interaction of these two variables."
+            },
+            {
+               "question_letter": "b",
+               "question": "Predict the amount of lead (Lead) in a well based on Year with two different lines depending on whether or not the well has been cleaned (Iclean)."
+            },
+            {
+               "question_letter": "c",
+               "question": "Predict the amount of titanium (Titanium) in a well based on a possible quadratic relationship with the distance (Miles) from a mining site."
+            },
+            {
+               "question_letter": "d",
+               "question": "Predict the amount of sulﬁde (Sulﬁde) in a well based on Year, distance (Miles) from a mining site, depth (Depth) of the well, and any interactions of pairs of explanatory variables."
+            }
+         ]
+      },
+      {
+         "question_number": "5",
+         "question_context": "This question will use the ThreeCars.txt dataset on our class Canvas page. The response variable is Price (the price of the car) and the explanatory variable is Mileage (miles of the car in 1000’s of miles).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Create a scatterplot of Mileage on the X-axis and Price on the Y-axis. Show the plot and comment on what you see with respect to the association between Mileage and Price."
+            },
+            {
+               "question_letter": "b",
+               "question": "Fit a simple linear regression model with the response being Price and the covariate being Mileage. Show the residuals plot versus fitted values plot."
+            },
+            {
+               "question_letter": "c",
+               "question": "What do you see in the plot from part b. with respect to the linear relationship between Mileage and Price?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What do you see in the plot from part b. with respect to the constant variance assumption of the linear regression model?"
+            },
+            {
+               "question_letter": "e",
+               "question": "Create a qq-plot of the residuals, and comment on the normality of the errors assumption."
+            }
+         ]
+      }
+   ]
+}
+
+{
+   "Homework_Number": "3",
+   "Question_List": [
+      {
+         "question_number": "1",
+         "question_context": "Say we have two quantitive explanatory variables, X1 and X2, and a quantitative continuous response Y. Say we have two population models.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Is Model 1 nested under Model 2? Yes or no."
+            },
+            {
+               "question_letter": "b",
+               "question": "In Model 1, what would a null hypothesis of β1 = 0 imply with how X1 affects the response?"
+            },
+            {
+               "question_letter": "c",
+               "question": "In Model 2, if β3 is not equal to 0, what does that imply with how X1 is affecting Y. Explain in a sentence or two."
+            },
+            {
+               "question_letter": "d",
+               "question": "In Model 2, given that X1 is in the model already, say you want to test if X2 affects the response directly or indirectly (through X1). What should be the null and alternative be?"
+            },
+            {
+               "question_letter": "e",
+               "question": "In Model 2, if you want to test if X1 and X2 have any association with Y, what would the null and alternative be?"
+            },
+            {
+               "question_letter": "f",
+               "question": "In Model 2, now say X2 is a categorical yes/no covariate (0 for no and 1 for yes). Interpret the effect of X1 on the response variable Y."
+            }
+         ]
+      },
+      {
+         "question_number": "2",
+         "question_context": "Say you have two models with respect to the same response variable Y. Model 1 has all the p-many explanatory variables that Model 2 has but also an additional new explanatory variable.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "The adjusted R-squared (not the regular R squared, but the adjusted one) of Model 1 is more than Model 2."
+            },
+            {
+               "question_letter": "b",
+               "question": "Model 1 has a higher sum of square total (SSTO) than Model 2."
+            },
+            {
+               "question_letter": "c",
+               "question": "Model 1 has a higher sum of square error (SSE) than Model 2."
+            },
+            {
+               "question_letter": "d",
+               "question": "The slope β1 on the first explanatory variable, X1, is the same in both models."
+            }
+         ]
+      },
+      {
+         "question_number": "3",
+         "question_context": "This question will use the pulse.txt dataset we have been using. Let the response Y be Rest (resting heart rate), and covariates X1 be Height in inches (Hgt), X2 be Weight in pounds (Wgt) and X3 smoking status (Smoke, 1 for smokers and 0 for non-smokers).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Say we want a multiple linear regression model with all the covariates listed in it, along with an interaction between height and weight. Write out this population model."
+            },
+            {
+               "question_letter": "b",
+               "question": "Why does it make sense to have an interaction between weight and height in the model? Explain."
+            },
+            {
+               "question_letter": "c",
+               "question": "Fit the model from part a. in R and write out the estimated model. What is the adjusted R-squared value?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What is the estimated SSE (sum of squared errors) of your model? Use the R output from the summary(model), along with some formulas, to compute this."
+            },
+            {
+               "question_letter": "e",
+               "question": "Test if your model has any significance. Write out the null and alternative hypothesis, the test statistic (and what distribution it follows), p-value, and make a conclusion."
+            },
+            {
+               "question_letter": "f",
+               "question": "Test the interaction term between height and weight. State the null and alternative hypothesis and p-value. What can you conclude with respect to the effect of height and weight on the response of resting heart rate?"
+            },
+            {
+               "question_letter": "g",
+               "question": "Now a researcher states that you do not need weight in the model in any way or form. Write out the null and alternative hypothesis for this (write it out in terms of slope coefficients)."
+            },
+            {
+               "question_letter": "h",
+               "question": "Conduct the test from part g. Make a conclusion in context of the study."
+            },
+            {
+               "question_letter": "i",
+               "question": "Show the output from R for the sequential sum of regressions table (keep the order of X1, X2, X3, and X1X2 in your model). Does adding weight when height is already in the model add to the explanatory strength of the model?"
+            },
+            {
+               "question_letter": "j",
+               "question": "Using the sequential sum of regression table from part i, what is the SSTO (sum of squared total) for this model?"
+            },
+            {
+               "question_letter": "k",
+               "question": "Now say you have a model with only height in it. From your table in part i, what is the SSE, SSR, and SSTO of this model with only height as covariate? Note: Do not run a new model, use the table from part i."
+            },
+            {
+               "question_letter": "l",
+               "question": "Explain in a few sentences how daily exercise amount could be a potential confounder in the model from part a."
+            },
+            {
+               "question_letter": "m",
+               "question": "Using the model from part a., create and present the scatterplot of the residual versus fitted values (fitted values go on the X-axis)."
+            },
+            {
+               "question_letter": "n",
+               "question": "Is there any evidence that our assumption of constant variance (a single σ2 for the entire model) is invalid?"
+            },
+            {
+               "question_letter": "o",
+               "question": "Using the residual vs. fitted plot from part m., comment on the linearity assumption of the model that was fit."
+            },
+            {
+               "question_letter": "p",
+               "question": "Using the model from part a., now create a QQ plot of the residuals. Do we seem to have any issues with our normality assumption for the errors?"
+            },
+            {
+               "question_letter": "q",
+               "question": "Using the model from part a., do a summary(data) to see the summary statistics of the weight (Wgt) explanatory variable. Does it make sense to use your model from part a. to predict the resting heart rate for someone who weighs 350 pounds? Why or why not."
+            }
+         ]
+      },
+      {
+         "question_number": "4",
+         "question_context": "An environmental expert is interested in modeling the concentration of various chemicals in well water over time.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Predict the amount of arsenic (Arsenic) in a well based on Year, the distance (Miles) from a mining site, and the interaction of these two variables."
+            },
+            {
+               "question_letter": "b",
+               "question": "Predict the amount of lead (Lead) in a well based on Year with two different lines depending on whether or not the well has been cleaned (Iclean)."
+            },
+            {
+               "question_letter": "c",
+               "question": "Predict the amount of titanium (Titanium) in a well based on a possible quadratic relationship with the distance (Miles) from a mining site."
+            },
+            {
+               "question_letter": "d",
+               "question": "Predict the amount of sulﬁde (Sulﬁde) in a well based on Year, distance (Miles) from a mining site, depth (Depth) of the well, and any interactions of pairs of explanatory variables."
+            }
+         ]
+      },
+      {
+         "question_number": "5",
+         "question_context": "This question will use the ThreeCars.txt dataset on our class Canvas page. The response variable is Price (the price of the car) and the explanatory variable is Mileage (miles of the car in 1000’s of miles).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Create a scatterplot of Mileage on the X-axis and Price on the Y-axis. Show the plot and comment on what you see with respect to the association between Mileage and Price."
+            },
+            {
+               "question_letter": "b",
+               "question": "Fit a simple linear regression model with the response being Price and the covariate being Mileage. Show the residuals plot versus fitted values plot."
+            },
+            {
+               "question_letter": "c",
+               "question": "What do you see in the plot from part b. with respect to the linear relationship between Mileage and Price?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What do you see in the plot from part b. with respect to the constant variance assumption of the linear regression model?"
+            },
+            {
+               "question_letter": "e",
+               "question": "Create a qq-plot of the residuals, and comment on the normality of the errors assumption."
+            }
+         ]
+      }
+   ]
+}
+
+{
+   "Homework_Number": "3",
+   "Question_List": [
+      {
+         "question_number": "1",
+         "question_context": "Say we have two quantitive explanatory variables, X1 and X2, and a quantitative continuous response Y. Say we have two population models.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Is Model 1 nested under Model 2? Yes or no."
+            },
+            {
+               "question_letter": "b",
+               "question": "In Model 1, what would a null hypothesis of β1 = 0 imply with how X1 affects the response?"
+            },
+            {
+               "question_letter": "c",
+               "question": "In Model 2, if β3 is not equal to 0, what does that imply with how X1 is affecting Y. Explain in a sentence or two."
+            },
+            {
+               "question_letter": "d",
+               "question": "In Model 2, given that X1 is in the model already, say you want to test if X2 affects the response directly or indirectly (through X1). What should be the null and alternative be?"
+            },
+            {
+               "question_letter": "e",
+               "question": "In Model 2, if you want to test if X1 and X2 have any association with Y, what would the null and alternative be?"
+            },
+            {
+               "question_letter": "f",
+               "question": "In Model 2, now say X2 is a categorical yes/no covariate (0 for no and 1 for yes). Interpret the effect of X1 on the response variable Y."
+            }
+         ]
+      },
+      {
+         "question_number": "2",
+         "question_context": "Say you have two models with respect to the same response variable Y. Model 1 has all the p-many explanatory variables that Model 2 has but also an additional new explanatory variable.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "The adjusted R-squared (not the regular R squared, but the adjusted one) of Model 1 is more than Model 2."
+            },
+            {
+               "question_letter": "b",
+               "question": "Model 1 has a higher sum of square total (SSTO) than Model 2."
+            },
+            {
+               "question_letter": "c",
+               "question": "Model 1 has a higher sum of square error (SSE) than Model 2."
+            },
+            {
+               "question_letter": "d",
+               "question": "The slope β1 on the first explanatory variable, X1, is the same in both models."
+            }
+         ]
+      },
+      {
+         "question_number": "3",
+         "question_context": "This question will use the pulse.txt dataset we have been using. Let the response Y be Rest (resting heart rate), and covariates X1 be Height in inches (Hgt), X2 be Weight in pounds (Wgt) and X3 smoking status (Smoke, 1 for smokers and 0 for non-smokers).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Say we want a multiple linear regression model with all the covariates listed in it, along with an interaction between height and weight. Write out this population model."
+            },
+            {
+               "question_letter": "b",
+               "question": "Why does it make sense to have an interaction between weight and height in the model? Explain."
+            },
+            {
+               "question_letter": "c",
+               "question": "Fit the model from part a. in R and write out the estimated model. What is the adjusted R-squared value?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What is the estimated SSE (sum of squared errors) of your model? Use the R output from the summary(model), along with some formulas, to compute this."
+            },
+            {
+               "question_letter": "e",
+               "question": "Test if your model has any significance. Write out the null and alternative hypothesis, the test statistic (and what distribution it follows), p-value, and make a conclusion."
+            },
+            {
+               "question_letter": "f",
+               "question": "Test the interaction term between height and weight. State the null and alternative hypothesis and p-value. What can you conclude with respect to the effect of height and weight on the response of resting heart rate?"
+            },
+            {
+               "question_letter": "g",
+               "question": "Now a researcher states that you do not need weight in the model in any way or form. Write out the null and alternative hypothesis for this (write it out in terms of slope coefficients)."
+            },
+            {
+               "question_letter": "h",
+               "question": "Conduct the test from part g. Make a conclusion in context of the study."
+            },
+            {
+               "question_letter": "i",
+               "question": "Show the output from R for the sequential sum of regressions table (keep the order of X1, X2, X3, and X1X2 in your model). Does adding weight when height is already in the model add to the explanatory strength of the model?"
+            },
+            {
+               "question_letter": "j",
+               "question": "Using the sequential sum of regression table from part i, what is the SSTO (sum of squared total) for this model?"
+            },
+            {
+               "question_letter": "k",
+               "question": "Now say you have a model with only height in it. From your table in part i, what is the SSE, SSR, and SSTO of this model with only height as covariate? Note: Do not run a new model, use the table from part i."
+            },
+            {
+               "question_letter": "l",
+               "question": "Explain in a few sentences how daily exercise amount could be a potential confounder in the model from part a."
+            },
+            {
+               "question_letter": "m",
+               "question": "Using the model from part a., create and present the scatterplot of the residual versus fitted values (fitted values go on the X-axis)."
+            },
+            {
+               "question_letter": "n",
+               "question": "Is there any evidence that our assumption of constant variance (a single σ2 for the entire model) is invalid?"
+            },
+            {
+               "question_letter": "o",
+               "question": "Using the residual vs. fitted plot from part m., comment on the linearity assumption of the model that was fit."
+            },
+            {
+               "question_letter": "p",
+               "question": "Using the model from part a., now create a QQ plot of the residuals. Do we seem to have any issues with our normality assumption for the errors?"
+            },
+            {
+               "question_letter": "q",
+               "question": "Using the model from part a., do a summary(data) to see the summary statistics of the weight (Wgt) explanatory variable. Does it make sense to use your model from part a. to predict the resting heart rate for someone who weighs 350 pounds? Why or why not."
+            }
+         ]
+      },
+      {
+         "question_number": "4",
+         "question_context": "An environmental expert is interested in modeling the concentration of various chemicals in well water over time.",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Predict the amount of arsenic (Arsenic) in a well based on Year, the distance (Miles) from a mining site, and the interaction of these two variables."
+            },
+            {
+               "question_letter": "b",
+               "question": "Predict the amount of lead (Lead) in a well based on Year with two different lines depending on whether or not the well has been cleaned (Iclean)."
+            },
+            {
+               "question_letter": "c",
+               "question": "Predict the amount of titanium (Titanium) in a well based on a possible quadratic relationship with the distance (Miles) from a mining site."
+            },
+            {
+               "question_letter": "d",
+               "question": "Predict the amount of sulﬁde (Sulﬁde) in a well based on Year, distance (Miles) from a mining site, depth (Depth) of the well, and any interactions of pairs of explanatory variables."
+            }
+         ]
+      },
+      {
+         "question_number": "5",
+         "question_context": "This question will use the ThreeCars.txt dataset on our class Canvas page. The response variable is Price (the price of the car) and the explanatory variable is Mileage (miles of the car in 1000’s of miles).",
+         "individual_question_list": [
+            {
+               "question_letter": "a",
+               "question": "Create a scatterplot of Mileage on the X-axis and Price on the Y-axis. Show the plot and comment on what you see with respect to the association between Mileage and Price."
+            },
+            {
+               "question_letter": "b",
+               "question": "Fit a simple linear regression model with the response being Price and the covariate being Mileage. Show the residuals plot versus fitted values plot."
+            },
+            {
+               "question_letter": "c",
+               "question": "What do you see in the plot from part b. with respect to the linear relationship between Mileage and Price?"
+            },
+            {
+               "question_letter": "d",
+               "question": "What do you see in the plot from part b. with respect to the constant variance assumption of the linear regression model?"
+            },
+            {
+               "question_letter": "e",
+               "question": "Create a qq-plot of the residuals, and comment on the normality of the errors assumption."
+            }
+         ]
+      }
+   ]
+}
