@@ -7,7 +7,8 @@ import re
 from rpy2.robjects import r, default_converter
 from rpy2.robjects.conversion import localconverter
 
-
+original_dir = os.getcwd()
+r(f'setwd("{original_dir}")')
 
 json_parser_sys_prompt = """
 You are a question parser for homework documents. Each homework is a large text, separated into sub questions (numbered) 
@@ -97,30 +98,49 @@ def write_text_to_extractions_folder(text, file_path):
     return new_path
 
 
-def get_questions(homework: str) -> QuestionList:
-    chat_completion = groq.chat.completions.create(
-        messages=[
-            {
-                "role": "system",
-                "content": json_parser_sys_prompt,
-            },
-            {
-                "role": "user",
-                "content": f"Generate a question list for the following text:\n\n{homework}",
-            },
-        ],
-        model="llama3-8b-8192",
-        temperature=0,
-        response_format={"type": "json_object"},
-    )
+def get_questions(homework: str, file_path: str) -> QuestionList:
+    # determine if there is a file at 'extracted_questions/<homework_name>
+    clean_file_path = f"extracted_questions/{file_path.split('/')[-1]}.txt"
+    if os.path.exists(clean_file_path):
+        # read the file and parse it into a QuestionList object
+        print("questions have already been extracted from homework document in the extracted_questions folder")
+        with open(clean_file_path, 'r') as f:
+            text = f.read()
+            return text
+
+    else:
+        # extract the text from the PDF file and save it to a file in the 'text_extractions' folder
+        chat_completion = groq.chat.completions.create(
+            messages=[
+                {
+                    "role": "system",
+                    "content": json_parser_sys_prompt,
+                },
+                {
+                    "role": "user",
+                    "content": f"Generate a question list for the following text:\n\n{homework}",
+                },
+            ],
+            model="llama3-8b-8192",
+            temperature=0,
+            response_format={"type": "json_object"},
+        )
+        
+        output = chat_completion.choices[0].message.content
+        with open(clean_file_path, 'w') as f:
+            f.write("\n\n"+str(output))
+        return output
     
-    # Parse the JSON response to match the defined Pydantic model
-    output = chat_completion.choices[0].message.content
-    with open("logs/parsed_questions.log", 'a') as f:
-        f.write("\n\n"+str(output))
-    return output
+def get_file_snippet(file_path):
+    with open(file_path, 'r') as f:
+        data = f.read()
+        return data[:500]
 
 def answer_questions(questions: str, q_context: str, homework_number: int, available_text_files: list[str]):
+    snips = []
+    for file in available_text_files:
+        full_path = f"/Users/samueltownsend/Desktop/UCI/Winter_2025/R_class/Homework/HW{homework_number}/{file}"
+        snips.append(get_file_snippet(full_path))
     chat_completion = groq.chat.completions.create(
         messages=[
             {
@@ -129,7 +149,12 @@ def answer_questions(questions: str, q_context: str, homework_number: int, avail
             },
             {
                 "role": "user",
-                "content": f"You have this question context: {q_context}\nAnd this list of available files to you: {available_text_files}\nAnd this homework number: {homework_number}\nAnswer these questions:\n{questions}",
+                "content": f"""You have this question context: {q_context}
+                And this list of available files to you: {available_text_files}
+                And here's a preview of the files: {snips}
+                And this homework number: {homework_number}
+                Answer these questions:\n{questions}
+            """,
             },
         ],
         model="llama3-70b-8192",
@@ -155,9 +180,9 @@ def extract_all_r_code(llm_output):
 
 def run_r(extracted_r_code: str):
     # Run the R code
+    original_dir = os.getcwd()
     with localconverter(default_converter):
         try:
-            original_dir = os.getcwd()
             r(f'setwd("{os.path.abspath("R_images")}")')
             r('options(device="png")')
             # Execute R code
@@ -166,6 +191,7 @@ def run_r(extracted_r_code: str):
             return result
 
         except Exception as e:
+            r(f'setwd("{original_dir}")')
             return str(e)
 
 example = """
